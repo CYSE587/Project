@@ -1,0 +1,1518 @@
+{
+  "version": "2.2.0",
+  "summary": {
+    "title": "Assignment 01 - CYSE 587",
+    "owner": "Matthew Young",
+    "description": "Disaster response system utilizing MQTT communication protocol via drones as brokers. ",
+    "id": 0
+  },
+  "detail": {
+    "contributors": [],
+    "diagrams": [
+      {
+        "id": 2,
+        "title": "Disaster Response System",
+        "diagramType": "LINDDUN",
+        "placeholder": "New LINDDUN diagram description",
+        "thumbnail": "./public/content/images/thumbnail.linddun.jpg",
+        "version": "2.2.0",
+        "cells": [
+          {
+            "position": {
+              "x": 149.99999999998863,
+              "y": 25.000000000004263
+            },
+            "size": {
+              "width": 990,
+              "height": 650
+            },
+            "shape": "trust-boundary-box",
+            "attrs": {
+              "headerText": {
+                "text": "Disaster Relief System"
+              }
+            },
+            "zIndex": -1,
+            "id": "28091d6e-bd54-4709-8ae1-4be86a0e6dbd",
+            "data": {
+              "type": "tm.BoundaryBox",
+              "name": "Disaster Relief System",
+              "description": "",
+              "isTrustBoundary": true,
+              "hasOpenThreats": false
+            }
+          },
+          {
+            "position": {
+              "x": 189.9999999999999,
+              "y": 55.00000000000074
+            },
+            "size": {
+              "width": 370,
+              "height": 180
+            },
+            "shape": "trust-boundary-box",
+            "attrs": {
+              "headerText": {
+                "text": "Edge Broker Trust Boundary"
+              }
+            },
+            "zIndex": -1,
+            "id": "45cf216a-68fb-445d-ba68-d426dbe0bdd5",
+            "data": {
+              "type": "tm.BoundaryBox",
+              "name": "Edge Broker Trust Boundary",
+              "description": "",
+              "isTrustBoundary": true,
+              "hasOpenThreats": false
+            }
+          },
+          {
+            "position": {
+              "x": 669.9999999999998,
+              "y": 55.00000000000074
+            },
+            "size": {
+              "width": 430,
+              "height": 430
+            },
+            "shape": "trust-boundary-box",
+            "attrs": {
+              "headerText": {
+                "text": "Cloud Broker Trust Boundary"
+              }
+            },
+            "zIndex": -1,
+            "id": "4d1178fc-7e36-4d68-bbbd-435fc5989675",
+            "data": {
+              "type": "tm.BoundaryBox",
+              "name": "Cloud Broker Trust Boundary",
+              "description": "",
+              "isTrustBoundary": true,
+              "hasOpenThreats": false
+            }
+          },
+          {
+            "position": {
+              "x": 189.9999999999999,
+              "y": 299.99999999999983
+            },
+            "size": {
+              "width": 310,
+              "height": 180
+            },
+            "shape": "trust-boundary-box",
+            "attrs": {
+              "headerText": {
+                "text": "\nCrisis Management Center (CMC)\nTrust Boundary"
+              }
+            },
+            "zIndex": -1,
+            "id": "09062cf9-e4eb-441c-8ef2-ec6fddf4721c",
+            "data": {
+              "type": "tm.BoundaryBox",
+              "name": "\nCrisis Management Center (CMC)\nTrust Boundary",
+              "description": "",
+              "isTrustBoundary": true,
+              "hasOpenThreats": false
+            }
+          },
+          {
+            "position": {
+              "x": 530,
+              "y": 520
+            },
+            "size": {
+              "width": 150,
+              "height": 130
+            },
+            "shape": "trust-boundary-box",
+            "attrs": {
+              "headerText": {
+                "text": "Log Trust Boundary"
+              }
+            },
+            "id": "6e0a1fcb-fa6d-429e-8e22-2d1067c3bc77",
+            "zIndex": -1,
+            "data": {
+              "type": "tm.BoundaryBox",
+              "name": "Log Trust Boundary",
+              "description": "",
+              "isTrustBoundary": true,
+              "hasOpenThreats": false
+            }
+          },
+          {
+            "position": {
+              "x": 209.9999999999999,
+              "y": 100.00000000000074
+            },
+            "size": {
+              "width": 110,
+              "height": 90
+            },
+            "attrs": {
+              "text": {
+                "text": "Bridge Broker\nDrone"
+              },
+              "body": {
+                "stroke": "#333333",
+                "strokeWidth": 1.5,
+                "strokeDasharray": null
+              }
+            },
+            "visible": true,
+            "shape": "process",
+            "zIndex": 0,
+            "id": "50602ab9-6822-4a78-a8b3-ae03ed9aec1f",
+            "data": {
+              "type": "tm.Process",
+              "name": "Bridge Broker\nDrone",
+              "description": "Drones will patrol the area of operation and act as bridge brokers, intercepting messages from survivors and forwarding them to other drones until the message reaches the central broker. ",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "handlesCardPayment": false,
+              "handlesGoodsOrServices": false,
+              "isWebApplication": false,
+              "privilegeLevel": "",
+              "threats": []
+            }
+          },
+          {
+            "position": {
+              "x": 700,
+              "y": 135
+            },
+            "size": {
+              "width": 120,
+              "height": 100
+            },
+            "attrs": {
+              "text": {
+                "text": "Central \nMQTT Broker"
+              },
+              "body": {
+                "stroke": "#333333",
+                "strokeWidth": 1.5,
+                "strokeDasharray": null
+              }
+            },
+            "visible": true,
+            "shape": "process",
+            "zIndex": 1,
+            "id": "6357052f-143f-4f83-bcaa-b35ebb43891e",
+            "data": {
+              "type": "tm.Process",
+              "name": "Central \nMQTT Broker",
+              "description": "Central Broker receives data from all drones. Is connected to Python Subscribe Client, publishing received data which will be processed and forwarded to the SQL database.",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "handlesCardPayment": false,
+              "handlesGoodsOrServices": false,
+              "isWebApplication": false,
+              "privilegeLevel": "",
+              "threats": []
+            }
+          },
+          {
+            "position": {
+              "x": 745,
+              "y": 360
+            },
+            "size": {
+              "width": 120,
+              "height": 60
+            },
+            "attrs": {
+              "text": {
+                "text": "SQL DB"
+              },
+              "topLine": {
+                "strokeWidth": 1.5,
+                "strokeDasharray": null
+              },
+              "bottomLine": {
+                "strokeWidth": 1.5,
+                "strokeDasharray": null
+              }
+            },
+            "visible": true,
+            "shape": "store",
+            "zIndex": 2,
+            "id": "f1c54d6b-4a8f-481a-93c2-94761ff77306",
+            "data": {
+              "type": "tm.Store",
+              "name": "SQL DB",
+              "description": "SQL Database holds data on survivors, including location and status.",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isALog": false,
+              "isEncrypted": false,
+              "isSigned": false,
+              "storesCredentials": false,
+              "storesInventory": false,
+              "threats": []
+            }
+          },
+          {
+            "position": {
+              "x": 284.9999999999999,
+              "y": 345
+            },
+            "size": {
+              "width": 120,
+              "height": 110
+            },
+            "attrs": {
+              "text": {
+                "text": "Grafana\nDashboard"
+              },
+              "body": {
+                "stroke": "#333333",
+                "strokeWidth": 1.5,
+                "strokeDasharray": null
+              }
+            },
+            "visible": true,
+            "shape": "process",
+            "zIndex": 3,
+            "id": "aba58920-efad-4012-8cda-c1f2fc809ad4",
+            "data": {
+              "type": "tm.Process",
+              "name": "Grafana\nDashboard",
+              "description": "It is through the CMC and the Grafana Dashboard that the Dispatch Operator will review the rescue data and determine which survivors will require immediate assistance. Search and Rescue Operators will also submit reports on their actions that can be reviewed post operation. ",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "handlesCardPayment": false,
+              "handlesGoodsOrServices": false,
+              "isWebApplication": false,
+              "privilegeLevel": "",
+              "threats": []
+            }
+          },
+          {
+            "position": {
+              "x": -150,
+              "y": 90
+            },
+            "size": {
+              "width": 112.5,
+              "height": 60
+            },
+            "attrs": {
+              "text": {
+                "text": "Affected \nIndividual"
+              },
+              "body": {
+                "stroke": "#333333",
+                "strokeWidth": 1.5,
+                "strokeDasharray": null
+              }
+            },
+            "visible": true,
+            "shape": "actor",
+            "zIndex": 4,
+            "id": "54261e48-7ac2-4f84-8bef-a80875925dd5",
+            "data": {
+              "type": "tm.Actor",
+              "name": "Affected \nIndividual",
+              "description": "Survivors of the disaster event will utilize an Android rescue app to send basic message via MQTT.",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "providesAuthentication": false,
+              "threats": []
+            }
+          },
+          {
+            "position": {
+              "x": -60,
+              "y": 359.99999999999983
+            },
+            "size": {
+              "width": 112.5,
+              "height": 60
+            },
+            "attrs": {
+              "text": {
+                "text": "CMC Dispatch\nOperator"
+              },
+              "body": {
+                "stroke": "#333333",
+                "strokeWidth": 1.5,
+                "strokeDasharray": null
+              }
+            },
+            "visible": true,
+            "shape": "actor",
+            "zIndex": 5,
+            "id": "cc34ef57-145a-45e8-b6e8-0aa94d14b8ce",
+            "data": {
+              "type": "tm.Actor",
+              "name": "CMC Dispatch\nOperator",
+              "description": "The Dispatch Operator will determine areas and individuals who need immediate assistance and will send out Search and Rescue teams as needed.",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "providesAuthentication": false,
+              "threats": []
+            }
+          },
+          {
+            "position": {
+              "x": 950,
+              "y": 135
+            },
+            "size": {
+              "width": 110,
+              "height": 100
+            },
+            "attrs": {
+              "text": {
+                "text": "Python\nSubscribe\nScript"
+              },
+              "body": {
+                "stroke": "#333333",
+                "strokeWidth": 1.5,
+                "strokeDasharray": null
+              }
+            },
+            "visible": true,
+            "shape": "process",
+            "zIndex": 6,
+            "id": "4546a68d-6912-4e94-880d-8a304883b7a6",
+            "data": {
+              "type": "tm.Process",
+              "name": "Python\nSubscribe\nScript",
+              "description": "Received data is converted to SQL format and persists them in a database. ",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "handlesCardPayment": false,
+              "handlesGoodsOrServices": false,
+              "isWebApplication": false,
+              "privilegeLevel": "",
+              "threats": []
+            }
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "publish\nsrv/rescue\n",
+              "description": "",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": []
+            },
+            "id": "a591d018-afc1-4078-aeb1-1026ac47827c",
+            "labels": [
+              "publish\nsrv/rescue\n"
+            ],
+            "source": {
+              "cell": "6357052f-143f-4f83-bcaa-b35ebb43891e"
+            },
+            "target": {
+              "cell": "4546a68d-6912-4e94-880d-8a304883b7a6"
+            },
+            "vertices": [
+              {
+                "x": 890,
+                "y": 130
+              }
+            ]
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "subscribe\nsrv/rescue",
+              "description": "",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": []
+            },
+            "id": "b0e8f9f5-c1fa-4184-aaa8-bc3a35cfbb55",
+            "labels": [
+              "subscribe\nsrv/rescue"
+            ],
+            "source": {
+              "cell": "4546a68d-6912-4e94-880d-8a304883b7a6"
+            },
+            "target": {
+              "cell": "6357052f-143f-4f83-bcaa-b35ebb43891e"
+            },
+            "vertices": [
+              {
+                "x": 870,
+                "y": 240
+              }
+            ]
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "SQL INSERT\nsrv/rescue",
+              "description": "",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": []
+            },
+            "id": "9c303ddd-659c-4ca7-bc91-5a6f4e62787f",
+            "labels": [
+              "SQL INSERT\nsrv/rescue"
+            ],
+            "source": {
+              "cell": "4546a68d-6912-4e94-880d-8a304883b7a6"
+            },
+            "target": {
+              "cell": "f1c54d6b-4a8f-481a-93c2-94761ff77306"
+            },
+            "vertices": [
+              {
+                "x": 1010.5,
+                "y": 340
+              }
+            ]
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "Process\nData",
+              "description": "",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": []
+            },
+            "id": "62e980f8-514c-472a-a56c-5c16d1a8e415",
+            "labels": [
+              "Process\nData"
+            ],
+            "source": {
+              "cell": "aba58920-efad-4012-8cda-c1f2fc809ad4"
+            },
+            "target": {
+              "cell": "cc34ef57-145a-45e8-b6e8-0aa94d14b8ce"
+            },
+            "vertices": [
+              {
+                "x": 140,
+                "y": 380
+              }
+            ]
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": "block"
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "query database",
+              "description": "",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": true,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": []
+            },
+            "id": "1a479359-cc70-4d49-a6fc-df1fb9de163d",
+            "labels": [
+              "query database"
+            ],
+            "source": {
+              "cell": "aba58920-efad-4012-8cda-c1f2fc809ad4"
+            },
+            "target": {
+              "cell": "f1c54d6b-4a8f-481a-93c2-94761ff77306"
+            },
+            "vertices": []
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "relay\ncommands",
+              "description": "",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": []
+            },
+            "id": "78cc14c4-1748-4a4e-a2c5-106aebfc35f1",
+            "labels": [
+              "relay\ncommands"
+            ],
+            "source": {
+              "cell": "9f7b2e23-7106-4b27-95ab-92ea7658ede9"
+            },
+            "target": {
+              "cell": "50602ab9-6822-4a78-a8b3-ae03ed9aec1f"
+            },
+            "vertices": [
+              {
+                "x": 140,
+                "y": 190
+              }
+            ]
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "relay\ncommands",
+              "description": "",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": []
+            },
+            "id": "bc37ba09-8c7c-4b62-a997-38051a4d7bc7",
+            "labels": [
+              "relay\ncommands"
+            ],
+            "source": {
+              "x": 53,
+              "y": 300
+            },
+            "target": {
+              "cell": "b75a977c-c410-4ba9-9a43-56f2c2bead86"
+            },
+            "vertices": [
+              {
+                "x": 210,
+                "y": 270
+              }
+            ]
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "input\ndata",
+              "description": "",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": []
+            },
+            "id": "964582b5-84fa-4eed-86ff-35cd2328e254",
+            "labels": [
+              "input\ndata"
+            ],
+            "source": {
+              "cell": "54261e48-7ac2-4f84-8bef-a80875925dd5"
+            },
+            "target": {
+              "cell": "24e0297d-ef94-4a0d-b14d-6d1360c0285d"
+            },
+            "vertices": []
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "send dashboard\naction logs",
+              "description": "",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": []
+            },
+            "id": "819ca5cb-f7ff-4e7e-8144-c72939615dc0",
+            "source": {
+              "cell": "aba58920-efad-4012-8cda-c1f2fc809ad4"
+            },
+            "target": {
+              "cell": "c2fc9b08-3c46-44a1-ae65-7d33ba26bb63"
+            },
+            "labels": [
+              "send dashboard\naction logs"
+            ]
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "Analyze Logs\nand Network",
+              "description": "",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": []
+            },
+            "id": "3dde8f8a-4de0-4038-8dcc-68c91785e56e",
+            "source": {
+              "cell": "6e0a1fcb-fa6d-429e-8e22-2d1067c3bc77"
+            },
+            "target": {
+              "cell": "28051197-e1f7-4512-a0a1-6ea9ee41ea0b"
+            },
+            "labels": [
+              "Analyze Logs\nand Network"
+            ]
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "send database\nupdate logs",
+              "description": "",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": []
+            },
+            "id": "685596b4-6fb8-4582-a58a-d6badc81a1b2",
+            "source": {
+              "cell": "f1c54d6b-4a8f-481a-93c2-94761ff77306"
+            },
+            "target": {
+              "cell": "c2fc9b08-3c46-44a1-ae65-7d33ba26bb63"
+            },
+            "labels": [
+              "send database\nupdate logs"
+            ]
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "mirror traffic",
+              "description": "",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": []
+            },
+            "id": "117c4a07-0316-4547-b668-9fa910243d77",
+            "source": {
+              "cell": "6357052f-143f-4f83-bcaa-b35ebb43891e"
+            },
+            "target": {
+              "cell": "de12848a-0252-41e8-bcd2-67a621c5793f"
+            },
+            "labels": [
+              "mirror traffic"
+            ],
+            "vertices": [
+              {
+                "x": 610,
+                "y": -50
+              }
+            ]
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "mirror traffic",
+              "description": "",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": []
+            },
+            "id": "1631a24d-42ed-4885-b727-c49192492270",
+            "source": {
+              "cell": "50602ab9-6822-4a78-a8b3-ae03ed9aec1f"
+            },
+            "target": {
+              "cell": "de12848a-0252-41e8-bcd2-67a621c5793f"
+            },
+            "labels": [
+              "mirror traffic"
+            ],
+            "vertices": [
+              {
+                "x": 280,
+                "y": -10
+              }
+            ]
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "mirror traffic",
+              "description": "",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": []
+            },
+            "id": "11a6a4d3-f3a4-4a4a-8e91-1d0d86a1ffa1",
+            "source": {
+              "cell": "b75a977c-c410-4ba9-9a43-56f2c2bead86"
+            },
+            "target": {
+              "cell": "de12848a-0252-41e8-bcd2-67a621c5793f"
+            },
+            "labels": [
+              "mirror traffic"
+            ],
+            "vertices": [
+              {
+                "x": 460,
+                "y": -20
+              }
+            ]
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "monitor\ntraffic",
+              "description": "",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": []
+            },
+            "id": "0086452a-06fa-4140-a286-854adfd99120",
+            "source": {
+              "cell": "de12848a-0252-41e8-bcd2-67a621c5793f"
+            },
+            "target": {
+              "cell": "8108666d-7d2f-478e-ad56-299f813438e1"
+            },
+            "labels": [
+              "monitor\ntraffic"
+            ]
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "send\nMQTTS msg",
+              "description": "",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": []
+            },
+            "id": "96a7f863-9705-41f6-a077-50ab96b3dfdb",
+            "labels": [
+              "send\nMQTTS msg"
+            ],
+            "source": {
+              "cell": "24e0297d-ef94-4a0d-b14d-6d1360c0285d"
+            },
+            "target": {
+              "cell": "50602ab9-6822-4a78-a8b3-ae03ed9aec1f"
+            }
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "relay\nMQTTS msg",
+              "description": "",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": []
+            },
+            "id": "0b131f98-4217-478a-9cfb-d9ab7fe5bb4f",
+            "labels": [
+              "relay\nMQTTS msg"
+            ],
+            "source": {
+              "cell": "50602ab9-6822-4a78-a8b3-ae03ed9aec1f"
+            },
+            "target": {
+              "cell": "b75a977c-c410-4ba9-9a43-56f2c2bead86"
+            }
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "publish\nMQTTS srv/rescue",
+              "description": "",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": []
+            },
+            "id": "3ed08f2e-44a2-443b-8f45-404588b53349",
+            "labels": [
+              "publish\nMQTTS srv/rescue"
+            ],
+            "source": {
+              "cell": "b75a977c-c410-4ba9-9a43-56f2c2bead86"
+            },
+            "target": {
+              "cell": "6357052f-143f-4f83-bcaa-b35ebb43891e"
+            }
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "disable\nsuspicious accounts",
+              "description": "",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": []
+            },
+            "id": "b923b05e-0971-4c74-abbb-8dbb3313b175",
+            "source": {
+              "cell": "8108666d-7d2f-478e-ad56-299f813438e1"
+            },
+            "target": {
+              "cell": "24e0297d-ef94-4a0d-b14d-6d1360c0285d"
+            },
+            "labels": [
+              "disable\nsuspicious accounts"
+            ]
+          },
+          {
+            "position": {
+              "x": 420,
+              "y": 100.00000000000074
+            },
+            "size": {
+              "width": 110,
+              "height": 90
+            },
+            "attrs": {
+              "text": {
+                "text": " Bridge Broker\nDrone"
+              },
+              "body": {
+                "stroke": "#333333",
+                "strokeWidth": 1.5,
+                "strokeDasharray": null
+              }
+            },
+            "visible": true,
+            "shape": "process",
+            "zIndex": 11,
+            "id": "b75a977c-c410-4ba9-9a43-56f2c2bead86",
+            "data": {
+              "type": "tm.Process",
+              "name": " Bridge Broker\nDrone",
+              "description": "Drones will patrol the area of operation and act as bridge brokers, intercepting messages from survivors and forwarding them to other drones until the message reaches the central broker. ",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "handlesCardPayment": false,
+              "handlesGoodsOrServices": false,
+              "isWebApplication": false,
+              "privilegeLevel": "",
+              "threats": []
+            }
+          },
+          {
+            "position": {
+              "x": -60,
+              "y": 272
+            },
+            "size": {
+              "width": 112.5,
+              "height": 60
+            },
+            "attrs": {
+              "text": {
+                "text": "CMC Drone\nOperator"
+              },
+              "body": {
+                "stroke": "#333333",
+                "strokeWidth": 1.5,
+                "strokeDasharray": null
+              }
+            },
+            "visible": true,
+            "shape": "actor",
+            "zIndex": 12,
+            "id": "9f7b2e23-7106-4b27-95ab-92ea7658ede9",
+            "data": {
+              "type": "tm.Actor",
+              "name": "CMC Drone\nOperator",
+              "description": "",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "providesAuthentication": false,
+              "threats": []
+            }
+          },
+          {
+            "position": {
+              "x": 29.99999999998954,
+              "y": 80
+            },
+            "size": {
+              "width": 90,
+              "height": 70
+            },
+            "attrs": {
+              "text": {
+                "text": "Android \nwith App"
+              },
+              "body": {
+                "stroke": "#333333",
+                "strokeWidth": 1.5,
+                "strokeDasharray": null
+              }
+            },
+            "visible": true,
+            "shape": "process",
+            "zIndex": 13,
+            "id": "24e0297d-ef94-4a0d-b14d-6d1360c0285d",
+            "data": {
+              "type": "tm.Process",
+              "name": "Android \nwith App",
+              "description": "",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "handlesCardPayment": false,
+              "handlesGoodsOrServices": false,
+              "isWebApplication": false,
+              "privilegeLevel": "",
+              "threats": []
+            }
+          },
+          {
+            "position": {
+              "x": 545,
+              "y": 555
+            },
+            "size": {
+              "width": 120,
+              "height": 60
+            },
+            "attrs": {
+              "text": {
+                "text": "Log DB"
+              },
+              "topLine": {
+                "strokeWidth": 1.5,
+                "strokeDasharray": null
+              },
+              "bottomLine": {
+                "strokeWidth": 1.5,
+                "strokeDasharray": null
+              }
+            },
+            "visible": true,
+            "shape": "store",
+            "id": "c2fc9b08-3c46-44a1-ae65-7d33ba26bb63",
+            "zIndex": 14,
+            "data": {
+              "type": "tm.Store",
+              "name": "Log DB",
+              "description": "",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isALog": false,
+              "isEncrypted": false,
+              "isSigned": false,
+              "storesCredentials": false,
+              "storesInventory": false,
+              "threats": []
+            }
+          },
+          {
+            "position": {
+              "x": 557.4999999999998,
+              "y": 760
+            },
+            "size": {
+              "width": 112.5,
+              "height": 60
+            },
+            "attrs": {
+              "text": {
+                "text": "CMC Security\nAnalyst"
+              },
+              "body": {
+                "stroke": "#333333",
+                "strokeWidth": 1.5,
+                "strokeDasharray": null
+              }
+            },
+            "visible": true,
+            "shape": "actor",
+            "id": "28051197-e1f7-4512-a0a1-6ea9ee41ea0b",
+            "zIndex": 15,
+            "data": {
+              "type": "tm.Actor",
+              "name": "CMC Security\nAnalyst",
+              "description": "",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "providesAuthentication": false,
+              "threats": []
+            }
+          },
+          {
+            "position": {
+              "x": 119.99999999998954,
+              "y": -165
+            },
+            "size": {
+              "width": 112.5,
+              "height": 60
+            },
+            "attrs": {
+              "text": {
+                "text": "CMC Security\nAnalyst"
+              },
+              "body": {
+                "stroke": "#333333",
+                "strokeWidth": 1.5,
+                "strokeDasharray": null
+              }
+            },
+            "visible": true,
+            "shape": "actor",
+            "id": "8108666d-7d2f-478e-ad56-299f813438e1",
+            "zIndex": 16,
+            "data": {
+              "type": "tm.Actor",
+              "name": "CMC Security\nAnalyst",
+              "description": "",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "providesAuthentication": false,
+              "threats": []
+            }
+          },
+          {
+            "position": {
+              "x": 340,
+              "y": -190
+            },
+            "size": {
+              "width": 180,
+              "height": 110
+            },
+            "attrs": {
+              "text": {
+                "text": "Network Monitor\nTool"
+              },
+              "body": {
+                "stroke": "#333333",
+                "strokeWidth": 1.5,
+                "strokeDasharray": null
+              }
+            },
+            "visible": true,
+            "shape": "process",
+            "id": "de12848a-0252-41e8-bcd2-67a621c5793f",
+            "zIndex": 17,
+            "data": {
+              "type": "tm.Process",
+              "name": "Network Monitor\nTool",
+              "description": "",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "handlesCardPayment": false,
+              "handlesGoodsOrServices": false,
+              "isWebApplication": false,
+              "privilegeLevel": "",
+              "threats": []
+            }
+          }
+        ]
+      }
+    ],
+    "diagramTop": 4,
+    "reviewer": "",
+    "threatTop": 23
+  }
+}
